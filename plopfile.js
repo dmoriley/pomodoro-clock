@@ -7,13 +7,12 @@ const types = {
     append: 'append'
   }
 }
-// both regex are designed to inset after all the imports/export lines inside the file, instead of before
-// use second version to insert before existing lines
+// use second version to insert after existing lines
 const regex = {
-  import: /\/\/ PLOP_INJECT_IMPORT[\s\S](import \S*? from '\S*?';[\s\S])*(import \S*? from '\S*?';){1}|\/\/ PLOP_INJECT_IMPORT/gm,
-  import2: /\/\/ PLOP_INJECT_IMPORT/,
-  export: /export {[\s\S]([\s\S]*?,[\s\S])*([\s\S]*?,){1}|export {/gm,
-  export2: /export {/
+  import: /\/\* PLOP_INJECT_IMPORT \*\//,
+  import2: /\/\* PLOP_INJECT_IMPORT \*\/[\s\S](import \S*? from '\S*?';[\s\S])*(import \S*? from '\S*?';){1}|\/\* PLOP_INJECT_IMPORT \*\//gm,
+  export: /\/* PLOP_INJECT_EXPORT \*\//,
+  export2: /\/* PLOP_INJECT_EXPORT \*\/[\s\S]([\s\S]*?,[\s\S])*([\s\S]*?,){1}|\/* PLOP_INJECT_EXPORT \*\//gm
 };
 
 module.exports = plop => {
@@ -97,9 +96,9 @@ module.exports = plop => {
       {
         type: types.actions.add,
         path:
-          'src/pages/{{pascalCase name}}/{{pascalCase name}}.module.css',
+          'src/pages/{{pascalCase name}}/{{pascalCase name}}.module.scss',
         templateFile:
-          'plop-templates/Page/Page.module.css.hbs',
+          'plop-templates/Page/Page.module.scss.hbs',
       },
       {
         type: types.actions.add,
@@ -139,8 +138,18 @@ module.exports = plop => {
     actions: [
       {
         type: types.actions.add,
-        path: 'src/services/{{camelCase name}}.js',
-        templateFile: 'plop-templates/service.js.hbs',
+        path: 'src/services/{{camelCase name}}/{{camelCase name}}.js',
+        templateFile: 'plop-templates/Services/service.js.hbs',
+      },
+      {
+        type: types.actions.add,
+        path: 'src/services/{{camelCase name}}/{{camelCase name}}.test.js',
+        templateFile: 'plop-templates/Services/service.test.js.hbs',
+      },
+      {
+        type: types.actions.add,
+        path: 'src/services/{{camelCase name}}/index.js',
+        templateFile: 'plop-templates/Services/index.js.hbs',
       },
       {
         type: types.actions.add,
@@ -175,8 +184,18 @@ module.exports = plop => {
     actions: [
       {
         type: types.actions.add,
-        path: 'src/hooks/{{camelCase name}}.js',
-        templateFile: 'plop-templates/hook.js.hbs',
+        path: 'src/hooks/{{camelCase name}}/{{camelCase name}}.js',
+        templateFile: 'plop-templates/Hooks/hook.js.hbs',
+      },
+      {
+        type: types.actions.add,
+        path: 'src/hooks/{{camelCase name}}/{{camelCase name}}.test.js',
+        templateFile: 'plop-templates/Hooks/hook.test.js.hbs',
+      },
+      {
+        type: types.actions.add,
+        path: 'src/hooks/{{camelCase name}}/index.js',
+        templateFile: 'plop-templates/Hooks/index.js.hbs',
       },
       {
         type: types.actions.add,

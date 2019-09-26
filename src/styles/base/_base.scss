@@ -1,0 +1,42 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: black;
+    // font-family: Helvetica, Arial,sans-serif;
+    font-size: var(--m-size) !important;
+    line-height: 1.6;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+// h1, p {
+//   font-family: Lato;
+// }
+
+*, *:before, *:after {
+    box-sizing: border-box; //when setting the height/width of an item it takes into account the padding/border size aswell to get that size specified 
+  }
+
+button {
+    cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button:disabled {
+    cursor: default;
+}

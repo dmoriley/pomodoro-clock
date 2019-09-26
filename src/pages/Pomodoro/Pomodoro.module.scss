@@ -1,0 +1,40 @@
+.root {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #282c34;
+  // background: linear-gradient(rgb(102, 215, 250), $main-colour);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box {
+  background: fade-out( white, .15); /* Scss function that makes colour more transparent. Takes colour and number between 0-1*/
+  border-radius: 20px;
+  padding: var(--s-size) var(--s-size);
+  text-align:center;
+  width: auto;
+  // width: 40rem;
+  margin-bottom: 2.0rem;
+}
+
+
+// @media only screen and (min-width: $desktop-breakpoint) {
+// // desktop css in here
+//   .box-layout__box {
+//     // width: auto;
+//   }
+// }
+
+.box_layout__title {
+  // margin: 0 0 $m-size 0;
+  line-height: 1; /*makes sure there is space between your lines when you have text across multiple lines. Because title only uses one line 
+  setting it to 1 more evenly distributes the space above and below the line.*/
+}
+
+.box_layout__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

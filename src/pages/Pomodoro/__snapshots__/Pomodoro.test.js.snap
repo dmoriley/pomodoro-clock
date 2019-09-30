@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pomodoro renders without error 1`] = `
+<div
+  class="root"
+>
+  <section
+    class="box"
+  >
+    <header>
+      <h1>
+        Pomodoro Clock
+      </h1>
+    </header>
+    <div
+      class="root"
+    >
+      <div>
+        <div>
+          break length
+        </div>
+        <div>
+          session length
+        </div>
+      </div>
+      <div>
+        clock
+      </div>
+      <div>
+        buttons
+      </div>
+    </div>
+    <footer>
+      <p>
+        Designed and Coded by
+        <br />
+        <span>
+          David O'Riley
+        </span>
+      </p>
+    </footer>
+  </section>
+</div>
+`;

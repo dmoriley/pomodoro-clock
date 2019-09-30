@@ -7,6 +7,7 @@
   --dark-grey: #333333;
   --blue: #1c88bf;
   --dark-blue: #192944;
+  --dark-grey-blue: #282c34;
   --off-white: #f7f7f7;
   --rose-red: rgb(199, 83, 99);
   
@@ -22,11 +23,17 @@
   --xm-size: 2.4rem;
   --l-size: 3.2rem;
   --xl-size: 4.8rem;
+  --xxl-size: 6.4rem;
   --desktop-breakpoint: 45rem;
   
   //fade time
   --fade-time: 1s;
-  
-  //colours
-  --main-colour: #100527;
+}
+
+
+//fonts
+@font-face {
+  font-family: "Digital";
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot");
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff") format("woff"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7") format("svg");
 }

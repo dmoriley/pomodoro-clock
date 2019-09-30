@@ -1,9 +1,9 @@
 import React from 'react';
-import {{pascalCase name}} from './{{pascalCase name}}';
+import Clock from './Clock';
 import { render } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 
-describe('{{pascalCase name}}', () => {
+describe('Clock', () => {
    it('renders without error', () => {
 
    });

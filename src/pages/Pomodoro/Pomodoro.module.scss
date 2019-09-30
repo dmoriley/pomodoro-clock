@@ -1,7 +1,7 @@
 .root {
   min-height: 100vh;
   min-width: 100vw;
-  background-color: #282c34;
+  background-color: var(--dark-grey-blue);
   // background: linear-gradient(rgb(102, 215, 250), $main-colour);
   display: flex;
   justify-content: center;
@@ -10,15 +10,29 @@
 }
 
 .box {
-  background: fade-out( white, .15); /* Scss function that makes colour more transparent. Takes colour and number between 0-1*/
-  border-radius: 20px;
+  color: fade-out( white, .15);
   padding: var(--s-size) var(--s-size);
   text-align:center;
-  width: auto;
-  // width: 40rem;
+  width: 50rem;
   margin-bottom: 2.0rem;
 }
 
+h1 {
+  font-size: var(--xl-size);
+}
+
+footer {
+  p{
+    color: var(--rose-red);
+    font-family: monospace;
+    font-size: var(--s-size);
+    margin: 0;
+
+    span {
+      color: var(--blue);
+    }
+  }
+}
 
 // @media only screen and (min-width: $desktop-breakpoint) {
 // // desktop css in here
@@ -26,15 +40,3 @@
 //     // width: auto;
 //   }
 // }
-
-.box_layout__title {
-  // margin: 0 0 $m-size 0;
-  line-height: 1; /*makes sure there is space between your lines when you have text across multiple lines. Because title only uses one line 
-  setting it to 1 more evenly distributes the space above and below the line.*/
-}
-
-.box_layout__buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}

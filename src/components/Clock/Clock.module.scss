@@ -1,0 +1,18 @@
+$darkBlue: var(--dark-blue);
+
+.root {
+  padding: var(--s-size) var(--m-size);
+  display: inline-block;
+  border: 0.6rem solid lighten(#192944, 10%);
+  border-radius: 20%;
+
+  * {
+    margin: 0;
+  }
+}
+
+.time {
+  font-family: Digital;
+  font-size: 8rem;
+  line-height: 1;
+}

@@ -1,23 +1,25 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import styles from './Pomodoro.module.scss';
+import ClockContainer from '../../components/ClockContainer';
 
 const Pomodoro = props => {
   return (
     <div className={styles.root}>
-      <div className={styles.box}>
-        Pomodoro
-      </div>
+      <section className={styles.box}>
+        <header>
+          <h1>Pomodoro Clock</h1>
+        </header>
+          <ClockContainer />
+        <footer>
+          <p>
+            Designed and Coded by
+            <br/>
+            <span>David O'Riley</span>
+          </p>
+        </footer>
+      </section>
     </div>
   );
 };
-
-// Pomodoro.defaultProps = {
-
-// };
-
-// Pomodoro.propTypes = {
-
-// };
 
 export default Pomodoro;

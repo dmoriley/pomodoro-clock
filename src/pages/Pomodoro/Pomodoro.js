@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import styles from './Pomodoro.module.scss';
 
 const Pomodoro = props => {
@@ -12,12 +12,12 @@ const Pomodoro = props => {
   );
 };
 
-Pomodoro.defaultProps = {
+// Pomodoro.defaultProps = {
 
-};
+// };
 
-Pomodoro.propTypes = {
+// Pomodoro.propTypes = {
 
-};
+// };
 
 export default Pomodoro;

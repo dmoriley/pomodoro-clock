@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ClockContainer.module.scss';
 import Clock from '../Clock';
+import ClockActions from '../ClockActions';
 
 const ClockContainer = props => {
   return (
@@ -11,17 +12,9 @@ const ClockContainer = props => {
         <div>session length</div>
       </div>
       <Clock />
-      <div>buttons</div>
+      <ClockActions />
     </div>
   );
 };
-
-// ClockContainer.defaultProps = {
-
-// };
-
-// ClockContainer.propTypes = {
-
-// };
 
 export default ClockContainer;

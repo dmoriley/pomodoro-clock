@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Pomodoro.module.scss';
-import ClockContainer from '../../components/ClockContainer';
+import { ClockContainer } from '../../components/index';
 
 const Pomodoro = props => {
   return (

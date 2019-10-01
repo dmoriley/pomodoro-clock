@@ -8,11 +8,11 @@ const ClockActions = props => {
   return (
     <div>
       <span>
-        <FontAwesomeIcon icon={faPlay}/>
-        <FontAwesomeIcon icon={faPause}/>
+        <FontAwesomeIcon icon={faPlay} className="icon"/>
+        <FontAwesomeIcon icon={faPause} className="icon"/>
       </span>
       &nbsp;&nbsp;&nbsp;&nbsp;
-      <FontAwesomeIcon icon={faRedo}/>
+      <FontAwesomeIcon icon={faRedo} className="icon"/>
     </div>
   );
 };

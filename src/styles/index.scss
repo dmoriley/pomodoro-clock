@@ -1,4 +1,7 @@
 @import './base/settings';
 @import './base/base';
 
-
+.icon {
+  font-size: var(--l-size) !important;
+  cursor: pointer;
+}

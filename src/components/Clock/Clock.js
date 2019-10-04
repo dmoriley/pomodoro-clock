@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Clock.module.scss';
 
 const Clock = props => {
+  
   return (
     <div className={styles.root}>
       <h2>Session</h2>

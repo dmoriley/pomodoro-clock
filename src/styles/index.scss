@@ -4,4 +4,6 @@
 .icon {
   font-size: var(--l-size) !important;
   cursor: pointer;
+  user-select: none;
 }
+

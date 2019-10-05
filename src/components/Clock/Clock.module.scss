@@ -1,12 +1,20 @@
 .root {
   padding: var(--s-size) var(--m-size);
   display: inline-block;
-  border: 0.6rem solid lighten(#192944, 10%);
   border-radius: 20%;
-
   * {
     margin: 0;
   }
+}
+
+.off {
+  border: 0.6rem solid lighten(#192944, 10%);
+}
+.session {
+  border: 0.6rem solid lighten(red, 20%);
+}
+.break {
+  border: 0.6rem solid lighten(green, 20%);
 }
 
 .time {

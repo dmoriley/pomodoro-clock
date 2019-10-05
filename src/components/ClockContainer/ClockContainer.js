@@ -1,77 +1,83 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useRef } from 'react';
 import styles from './ClockContainer.module.scss';
 import { Clock, ClockActions, ClockSetting } from '../index';
+import { timer } from '../../services';
 
 export const ClockState = {
-  off: 1,
-  pause: 2,
-  session: 3,
-  break: 4
+  session: 1,
+  break: 2,
 };
 
 const ClockContainer = props => {
 
-  let interval; // interval to be set and cleared;
   const defaultBreakLength = 5;
   const defaultSessionLength = 20;
 
   const [breakLength, setBreakLength] = useState(defaultBreakLength);
   const [sessionLength, setSessionLength] = useState(defaultSessionLength);
-  const [time, setTime] = useState(defaultSessionLength * 60);
-  const [status, setStatus] = useState(ClockState.off);
-
-  // handle play should change the border color of the clock to red
-  // create and import function that formats milliseconds into the format mm:ss
+  const [time, setTime] = useState(defaultSessionLength * 60); // time displayed on the clock
+  const [power, setPower] = useState(false);
+  
+  // when passing state to functions the lastest isnt always available because of javascript closures
+  // which is why I used a ref for this one, the state is accessible through the current property
+  const status = useRef(ClockState.session); 
 
   function handleBreakIncrement() {
-    if(status === ClockState.off || status === ClockState.pause) {
+    if(!timer.isOn()) {
       setBreakLength(b => b + 1)
     }
   }
 
   function handleBreakDecrement() {
-    if(status === ClockState.off || status === ClockState.pause) {
+    if(!timer.isOn()) {
       setBreakLength(b => b !== 0 ? b - 1 : 0)
     }
   }
 
   function handleSessionIncrement() {
-    if(status === ClockState.off || status === ClockState.pause) {
+    if(!timer.isOn()) {
       setSessionLength(s => s + 1);
       setTime((sessionLength + 1) * 60)
     } 
   }
 
   function handleSessionDecrement() {
-    if(status === ClockState.off || status === ClockState.pause) {
+    if(!timer.isOn()) {
       setSessionLength(s => s !== 1 ? s - 1 : 1)
       setTime((sessionLength !== 1 ? sessionLength - 1 : 1) * 60)
     } 
   }
 
   function handleReset() {
-    clearInterval(interval);
-    setStatus(ClockState.off);
+    timer.pause();
+    setPower(false);
+    status.current = ClockState.session;
     setSessionLength(defaultSessionLength);
     setBreakLength(defaultBreakLength);
     setTime(defaultSessionLength * 60);
   }
 
   function handlePlayPause() {
-    // https://overreacted.io/making-setinterval-declarative-with-react-hooks/
-    
-    
-    // if(status === ClockState.off) {
-    //   setStatus(ClockState.session);
-    //   setInterval(() => {
-    //     console.log('test')
-    //     setTime(t => t - 1);
-    //   }, 1000);
-    // } 
-    // else { //pause
-    //   // clearInterval(interval);
-    // }
+    if(!timer.isOn()) {
+      setPower(true);
+      timer.start(() => setTime(t => {
+        // if its not 0 decrement like normal
+        if(t !== 0 ) {
+          return t - 1;
+        } else if (status.current === ClockState.session) {
+          // at this point we know its 0, so determine were status is was in the change it accordingly
+          status.current = ClockState.break;
+          return breakLength * 60;
+        } else {
+          status.current = ClockState.session;
+          return sessionLength * 60;
+        }
+      }));
+    } 
+    else { //pause, so turn off and pause timer
+      setPower(false);
+      timer.pause();
+    }
   }
 
   return (
@@ -90,7 +96,7 @@ const ClockContainer = props => {
           handleIncrement={handleSessionIncrement}
         />
       </div>
-      <Clock time={time} status={status}/>
+      <Clock time={time} status={status.current} power={power}/>
       <ClockActions handleReset={handleReset} handlePlayPause={handlePlayPause}/>
     </div>
   );

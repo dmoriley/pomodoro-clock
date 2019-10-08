@@ -11,7 +11,7 @@ export const ClockState = {
 const ClockContainer = props => {
 
   const defaultBreakLength = 5;
-  const defaultSessionLength = 20;
+  const defaultSessionLength = 25;
 
   const [breakLength, setBreakLength] = useState(defaultBreakLength);
   const [sessionLength, setSessionLength] = useState(defaultSessionLength);
@@ -24,13 +24,13 @@ const ClockContainer = props => {
 
   function handleBreakIncrement() {
     if(!timer.isOn()) {
-      setBreakLength(b => b + 1)
+      setBreakLength(b => b !== 60 ? b + 1 : 60)
     }
   }
 
   function handleBreakDecrement() {
     if(!timer.isOn()) {
-      setBreakLength(b => b !== 0 ? b - 1 : 0)
+      setBreakLength(b => b !== 1 ? b - 1 : 1)
     }
   }
 
@@ -86,13 +86,15 @@ const ClockContainer = props => {
     <div className={styles.root}>
       <div className={styles.settings}>
         <ClockSetting 
-          title="break length" 
+          title="break length"
+          id="break"
           setting={breakLength} 
           handleDecrement={handleBreakDecrement}
           handleIncrement={handleBreakIncrement}
         />
         <ClockSetting 
           title="session length"
+          id="session"
           setting={sessionLength} 
           handleDecrement={handleSessionDecrement}
           handleIncrement={handleSessionIncrement}

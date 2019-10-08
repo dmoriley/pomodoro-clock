@@ -6,12 +6,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const ClockActions = props => {
   return (
     <div>
-      <span onClick={props.handlePlayPause}>
+      <span id="start_stop" onClick={props.handlePlayPause}>
         <FontAwesomeIcon icon={faPlay} className="icon"/>
         <FontAwesomeIcon icon={faPause} className="icon"/>
       </span>
       &nbsp;&nbsp;&nbsp;&nbsp;
-      <FontAwesomeIcon icon={faRedo} className="icon" onClick={props.handleReset}/>
+      <FontAwesomeIcon id="reset" icon={faRedo} className="icon" onClick={props.handleReset}/>
     </div>
   );
 };

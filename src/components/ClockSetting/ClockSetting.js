@@ -8,11 +8,11 @@ const ClockSetting = props => {
 
   return (
     <div className={styles.root}>
-      <h3>{props.title}</h3>
+      <h3 id={props.id + '-label'}>{props.title}</h3>
       <div>
-        <FontAwesomeIcon className="icon" icon={faArrowDown} onClick={props.handleDecrement}/>
-        &nbsp;<span className={styles.setting}>{props.setting}</span>&nbsp;
-        <FontAwesomeIcon icon={faArrowUp} className="icon" onClick={props.handleIncrement}/>
+        <FontAwesomeIcon className="icon" icon={faArrowDown} onClick={props.handleDecrement} id={props.id + '-decrement'}/>
+        &nbsp;<span className={styles.setting} id={props.id + '-length'}>{props.setting}</span>&nbsp;
+        <FontAwesomeIcon icon={faArrowUp} className="icon" onClick={props.handleIncrement} id={props.id + '-increment'}/>
       </div>
     </div>
   );

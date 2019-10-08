@@ -66,9 +66,11 @@ const ClockContainer = props => {
           return t - 1;
         } else if (status.current === ClockState.session) {
           // at this point we know its 0, so determine were status is was in the change it accordingly
+          new Audio('./sounds/success.mp3').play();
           status.current = ClockState.break;
           return breakLength * 60;
         } else {
+          new Audio('./sounds/doubleBeep.mp3').play();
           status.current = ClockState.session;
           return sessionLength * 60;
         }

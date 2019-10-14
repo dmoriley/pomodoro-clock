@@ -23,28 +23,28 @@ const ClockContainer = props => {
   const status = useRef(ClockState.session); 
 
   function handleBreakIncrement() {
-    if(!timer.isOn()) {
+    if(!timer.isOn() && breakLength < 60) {
       setBreakLength(b => b + 1)
     }
   }
 
   function handleBreakDecrement() {
-    if(!timer.isOn()) {
+    if(!timer.isOn() && breakLength > 1) {
       setBreakLength(b => b !== 0 ? b - 1 : 0)
     }
   }
 
   function handleSessionIncrement() {
-    if(!timer.isOn()) {
+    if(!timer.isOn() && sessionLength < 60) {
       setSessionLength(s => s + 1);
       setTime((sessionLength + 1) * 60)
     } 
   }
 
   function handleSessionDecrement() {
-    if(!timer.isOn()) {
-      setSessionLength(s => s !== 1 ? s - 1 : 1)
-      setTime((sessionLength !== 1 ? sessionLength - 1 : 1) * 60)
+    if(!timer.isOn() && sessionLength > 1) {
+      setSessionLength(s => s - 1)
+      setTime((sessionLength - 1) * 60)
     } 
   }
 

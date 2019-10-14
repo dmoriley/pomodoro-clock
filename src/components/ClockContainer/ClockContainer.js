@@ -20,36 +20,39 @@ const ClockContainer = props => {
   
   // when passing state to functions the lastest isnt always available because of javascript closures
   // which is why I used a ref for this one, the state is accessible through the current property
-  const status = useRef(ClockState.session); 
+  const status = useRef(ClockState.session);
+  const audioRef = useRef(null);
 
   function handleBreakIncrement() {
-    if(!timer.isOn()) {
-      setBreakLength(b => b !== 60 ? b + 1 : 60)
+    if(!timer.isOn() && breakLength < 60) {
+      setBreakLength(b => b + 1)
     }
   }
 
   function handleBreakDecrement() {
-    if(!timer.isOn()) {
-      setBreakLength(b => b !== 1 ? b - 1 : 1)
+    if(!timer.isOn() && breakLength > 1) {
+      setBreakLength(b => b -1)
     }
   }
 
   function handleSessionIncrement() {
-    if(!timer.isOn()) {
+    if(!timer.isOn() && sessionLength < 60) {
       setSessionLength(s => s + 1);
       setTime((sessionLength + 1) * 60)
     } 
   }
 
   function handleSessionDecrement() {
-    if(!timer.isOn()) {
-      setSessionLength(s => s !== 1 ? s - 1 : 1)
-      setTime((sessionLength !== 1 ? sessionLength - 1 : 1) * 60)
+    if(!timer.isOn() && sessionLength > 1) {
+      setSessionLength(s => s -1)
+      setTime((sessionLength - 1 ) * 60)
     } 
   }
 
   function handleReset() {
     timer.pause();
+    audioRef.current.pause();
+    audioRef.current.currentTime = 0;
     setPower(false);
     status.current = ClockState.session;
     setSessionLength(defaultSessionLength);
@@ -66,11 +69,11 @@ const ClockContainer = props => {
           return t - 1;
         } else if (status.current === ClockState.session) {
           // at this point we know its 0, so determine were status is was in the change it accordingly
-          new Audio('./sounds/success.mp3').play();
+          audioRef.current.play();
           status.current = ClockState.break;
           return breakLength * 60;
         } else {
-          new Audio('./sounds/doubleBeep.mp3').play();
+          audioRef.current.play();
           status.current = ClockState.session;
           return sessionLength * 60;
         }
@@ -86,22 +89,13 @@ const ClockContainer = props => {
     <div className={styles.root}>
       <div className={styles.settings}>
         <ClockSetting 
-          title="break length"
-          id="break"
-          setting={breakLength} 
-          handleDecrement={handleBreakDecrement}
-          handleIncrement={handleBreakIncrement}
-        />
-        <ClockSetting 
-          title="session length"
-          id="session"
-          setting={sessionLength} 
-          handleDecrement={handleSessionDecrement}
-          handleIncrement={handleSessionIncrement}
+          breakk={{decrement: handleBreakDecrement, increment: handleBreakIncrement, length: breakLength}}
+          session={{decrement: handleSessionDecrement, increment: handleSessionIncrement, length: sessionLength}}
         />
       </div>
       <Clock time={time} status={status.current} power={power}/>
       <ClockActions handleReset={handleReset} handlePlayPause={handlePlayPause}/>
+      <audio id="beep" src="./sounds/doubleBeepLong.mp3" ref={audioRef} type="audio/mpeg"></audio>
     </div>
   );
 };

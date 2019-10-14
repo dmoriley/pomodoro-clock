@@ -9,11 +9,11 @@ const Clock = ({time, status, power}) => {
   return (
     <div className={`${styles.root} ${!power ? styles.off : status === ClockState.session ? styles.session : styles.break }`}>
       {
-        status === ClockState.session 
-        ? <h2 id="timer-label">Session</h2>
-        : <h2 id="timer-label">Break</h2>
+        // status === ClockState.session 
+        // ? <h2 id="timer-label">Session</h2>
+        // : <h2 id="timer-label">Break</h2>
       }
-      
+      <h2 id="timer-label">{status === ClockState.session ? 'Session' : 'Break'}</h2>
       <p id="time-left" className={styles.time}>{timeFormat.formatSeconds(time)}</p>
     </div>
   );

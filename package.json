@@ -1,5 +1,6 @@
 {
   "name": "pomodoro",
+  "homepage": "https://github.com/dmoriley/pomodoro-clock",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

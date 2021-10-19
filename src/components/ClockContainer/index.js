@@ -1,4 +1,3 @@
-import ClockContainer, { ClockState } from './ClockContainer';
+import ClockContainer from './ClockContainer';
 
 export default ClockContainer;
-export { ClockState };

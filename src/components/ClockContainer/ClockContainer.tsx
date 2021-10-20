@@ -3,7 +3,7 @@ import styles from './ClockContainer.module.scss';
 import { Clock, ClockActions, ClockSetting } from '../index';
 import usePomodoro from '../../hooks/pomodoro/pomodoro.hook';
 
-const ClockContainer = (props) => {
+const ClockContainer: React.FC = () => {
   const [
     { power, time, sessionLength, breakLength, status },
     reset,

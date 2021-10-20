@@ -1,20 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './{{pascalCase name}}.module.scss';
 
-const {{pascalCase name}} = props => {
+interface IProps {
+
+}
+
+const {{pascalCase name}}: React.FC<IProps> = props => {
   return (
     <div className={styles.root}>
     </div>
   );
-};
-
-{{pascalCase name}}.defaultProps = {
-
-};
-
-{{pascalCase name}}.propTypes = {
-
 };
 
 export default {{pascalCase name}};

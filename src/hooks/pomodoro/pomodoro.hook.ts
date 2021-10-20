@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react';
 import { pomodoro } from '../../services';
 
-const usePomodoro = () => {
+// type test = {
+
+// }
+
+const usePomodoro = (): any[] => {
   const [power, setPower] = useState(false);
   const [time, setTime] = useState(0);
   const [sessionLength, setSessionLength] = useState(0);
   const [breakLength, setBreakLength] = useState(0);
-  const [status, setStatus] = useState(undefined);
+  const [status, setStatus] = useState<number>(0);
 
   useEffect(() => {
     const subscriptions = [

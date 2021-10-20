@@ -1,7 +1,7 @@
 /* PLOP_INJECT_IMPORT */
-import usePomodoro from './pomodoro';
+import Pomodoro from './Pomodoro';
 
 export {
   /* PLOP_INJECT_EXPORT */
-	 usePomodoro,
-}
+  Pomodoro,
+};

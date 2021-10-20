@@ -2,18 +2,18 @@ import React from 'react';
 import styles from './Pomodoro.module.scss';
 import { ClockContainer } from '../../components/index';
 
-const Pomodoro = props => {
+const Pomodoro: React.FC = () => {
   return (
     <div className={styles.root}>
       <section className={styles.box}>
         <header>
           <h1>Pomodoro Clock</h1>
         </header>
-          <ClockContainer />
+        <ClockContainer />
         <footer>
           <p>
             Designed and Coded by
-            <br/>
+            <br />
             <span>David O'Riley</span>
           </p>
         </footer>

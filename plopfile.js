@@ -30,12 +30,12 @@ module.exports = (plop) => {
     actions: [
       {
         type: types.actions.add,
-        path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.js',
+        path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.tsx',
         templateFile: 'plop-templates/Component/Component.js.hbs',
       },
       {
         type: types.actions.add,
-        path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.test.js',
+        path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.test.tsx',
         templateFile: 'plop-templates/Component/Component.test.js.hbs',
       },
       {
@@ -45,24 +45,24 @@ module.exports = (plop) => {
       },
       {
         type: types.actions.add,
-        path: 'src/components/{{pascalCase name}}/index.js',
+        path: 'src/components/{{pascalCase name}}/index.ts',
         templateFile: 'plop-templates/Component/index.js.hbs',
       },
       {
         type: types.actions.add,
-        path: 'src/components/index.js',
+        path: 'src/components/index.ts',
         templateFile: 'plop-templates/injectable-index.js.hbs',
         skipIfExists: true,
       },
       {
         type: types.actions.append,
-        path: 'src/components/index.js',
+        path: 'src/components/index.ts',
         pattern: regex.import,
         template: `import {{pascalCase name}} from './{{pascalCase name}}';`,
       },
       {
         type: types.actions.append,
-        path: 'src/components/index.js',
+        path: 'src/components/index.ts',
         pattern: regex.export,
         template: `\t{{pascalCase name}},`,
       },
@@ -81,12 +81,12 @@ module.exports = (plop) => {
     actions: [
       {
         type: types.actions.add,
-        path: 'src/pages/{{pascalCase name}}/{{pascalCase name}}.js',
+        path: 'src/pages/{{pascalCase name}}/{{pascalCase name}}.tsx',
         templateFile: 'plop-templates/Page/Page.js.hbs',
       },
       {
         type: types.actions.add,
-        path: 'src/pages/{{pascalCase name}}/{{pascalCase name}}.test.js',
+        path: 'src/pages/{{pascalCase name}}/{{pascalCase name}}.test.tsx',
         templateFile: 'plop-templates/Page/Page.test.js.hbs',
       },
       {
@@ -96,24 +96,24 @@ module.exports = (plop) => {
       },
       {
         type: types.actions.add,
-        path: 'src/pages/{{pascalCase name}}/index.js',
+        path: 'src/pages/{{pascalCase name}}/index.ts',
         templateFile: 'plop-templates/Page/index.js.hbs',
       },
       {
         type: types.actions.add,
-        path: 'src/pages/index.js',
+        path: 'src/pages/index.ts',
         templateFile: 'plop-templates/injectable-index.js.hbs',
         skipIfExists: true,
       },
       {
         type: types.actions.append,
-        path: 'src/pages/index.js',
+        path: 'src/pages/index.ts',
         pattern: regex.import,
         template: `import {{pascalCase name}} from './{{pascalCase name}}';`,
       },
       {
         type: types.actions.append,
-        path: 'src/pages/index.js',
+        path: 'src/pages/index.ts',
         pattern: regex.export,
         template: `\t{{pascalCase name}},`,
       },
@@ -132,34 +132,34 @@ module.exports = (plop) => {
     actions: [
       {
         type: types.actions.add,
-        path: 'src/services/{{camelCase name}}/{{camelCase name}}.js',
+        path: 'src/services/{{camelCase name}}/{{camelCase name}}.ts',
         templateFile: 'plop-templates/Services/service.js.hbs',
       },
       {
         type: types.actions.add,
-        path: 'src/services/{{camelCase name}}/{{camelCase name}}.test.js',
+        path: 'src/services/{{camelCase name}}/{{camelCase name}}.test.ts',
         templateFile: 'plop-templates/Services/service.test.js.hbs',
       },
       {
         type: types.actions.add,
-        path: 'src/services/{{camelCase name}}/index.js',
+        path: 'src/services/{{camelCase name}}/index.ts',
         templateFile: 'plop-templates/Services/index.js.hbs',
       },
       {
         type: types.actions.add,
-        path: 'src/services/index.js',
+        path: 'src/services/index.ts',
         templateFile: 'plop-templates/injectable-index.js.hbs',
         skipIfExists: true,
       },
       {
         type: types.actions.append,
-        path: 'src/services/index.js',
+        path: 'src/services/index.ts',
         pattern: regex.import,
         template: `import {{camelCase name}} from './{{camelCase name}}';`,
       },
       {
         type: types.actions.append,
-        path: 'src/services/index.js',
+        path: 'src/services/index.ts',
         pattern: regex.export,
         template: `\t{{camelCase name}},`,
       },
@@ -178,34 +178,34 @@ module.exports = (plop) => {
     actions: [
       {
         type: types.actions.add,
-        path: 'src/hooks/{{camelCase name}}/{{camelCase name}}.hook.js',
+        path: 'src/hooks/{{camelCase name}}/{{camelCase name}}.hook.ts',
         templateFile: 'plop-templates/Hooks/hook.js.hbs',
       },
       {
         type: types.actions.add,
-        path: 'src/hooks/{{camelCase name}}/{{camelCase name}}.hook.test.js',
+        path: 'src/hooks/{{camelCase name}}/{{camelCase name}}.hook.test.ts',
         templateFile: 'plop-templates/Hooks/hook.test.js.hbs',
       },
       {
         type: types.actions.add,
-        path: 'src/hooks/{{camelCase name}}/index.js',
+        path: 'src/hooks/{{camelCase name}}/index.ts',
         templateFile: 'plop-templates/Hooks/index.js.hbs',
       },
       {
         type: types.actions.add,
-        path: 'src/hooks/index.js',
+        path: 'src/hooks/index.ts',
         templateFile: 'plop-templates/injectable-index.js.hbs',
         skipIfExists: true,
       },
       {
         type: types.actions.append,
-        path: 'src/hooks/index.js',
+        path: 'src/hooks/index.ts',
         pattern: regex.import,
         template: `import use{{pascalCase name}} from './{{camelCase name}}';`,
       },
       {
         type: types.actions.append,
-        path: 'src/hooks/index.js',
+        path: 'src/hooks/index.ts',
         pattern: regex.export,
         template: `\t use{{pascalCase name}},`,
       },

@@ -1,10 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './Clock.module.scss';
 import { time as timeFormat } from '../../services';
 import { SessionType } from '../../services/pomodoro';
 
-const Clock = ({ time, status, power }) => {
+type IProps = {
+  time: number;
+  status: number;
+  power: boolean;
+};
+
+const Clock: React.FC<IProps> = ({ time, status, power }) => {
   return (
     <div
       className={`${styles.root} ${
@@ -20,12 +25,6 @@ const Clock = ({ time, status, power }) => {
       <p className={styles.time}>{timeFormat.formatSeconds(time)}</p>
     </div>
   );
-};
-
-Clock.propTypes = {
-  time: PropTypes.number.isRequired,
-  status: PropTypes.number.isRequired,
-  power: PropTypes.bool.isRequired,
 };
 
 export default Clock;

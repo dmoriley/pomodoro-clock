@@ -6,8 +6,8 @@ import ClockContainer from './ClockContainer';
 
 export {
   /* PLOP_INJECT_EXPORT */
-	ClockSetting,
-	ClockActions,
-	Clock,
-	ClockContainer,
-}
+  ClockSetting,
+  ClockActions,
+  Clock,
+  ClockContainer,
+};

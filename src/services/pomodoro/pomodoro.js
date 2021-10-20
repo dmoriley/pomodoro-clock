@@ -49,7 +49,7 @@ const createPomodoro = () => {
         } else {
           new Audio('./sounds/doubleBeep.mp3').play();
           type.next(SessionType.session);
-          time.next(sessionLength * 60);
+          time.next(sessionLength.value * 60);
         }
       });
     } else {

@@ -1,21 +1,23 @@
 const types = {
   prompts: {
-    input: 'input'
+    input: 'input',
   },
   actions: {
     add: 'add',
-    append: 'append'
-  }
-}
+    append: 'append',
+  },
+};
 // use second version to insert after existing lines
 const regex = {
   import: /\/\* PLOP_INJECT_IMPORT \*\//,
-  import2: /\/\* PLOP_INJECT_IMPORT \*\/[\s\S](import \S*? from '\S*?';[\s\S])*(import \S*? from '\S*?';){1}|\/\* PLOP_INJECT_IMPORT \*\//gm,
+  import2:
+    /\/\* PLOP_INJECT_IMPORT \*\/[\s\S](import \S*? from '\S*?';[\s\S])*(import \S*? from '\S*?';){1}|\/\* PLOP_INJECT_IMPORT \*\//gm,
   export: /\/* PLOP_INJECT_EXPORT \*\//,
-  export2: /\/* PLOP_INJECT_EXPORT \*\/[\s\S]([\s\S]*?,[\s\S])*([\s\S]*?,){1}|\/* PLOP_INJECT_EXPORT \*\//gm
+  export2:
+    /\/* PLOP_INJECT_EXPORT \*\/[\s\S]([\s\S]*?,[\s\S])*([\s\S]*?,){1}|\/* PLOP_INJECT_EXPORT \*\//gm,
 };
 
-module.exports = plop => {
+module.exports = (plop) => {
   plop.setGenerator('component', {
     description: 'Create a reusable component',
     prompts: [
@@ -29,21 +31,17 @@ module.exports = plop => {
       {
         type: types.actions.add,
         path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.js',
-        templateFile:
-          'plop-templates/Component/Component.js.hbs',
+        templateFile: 'plop-templates/Component/Component.js.hbs',
       },
       {
         type: types.actions.add,
         path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.test.js',
-        templateFile:
-          'plop-templates/Component/Component.test.js.hbs',
+        templateFile: 'plop-templates/Component/Component.test.js.hbs',
       },
       {
         type: types.actions.add,
-        path:
-          'src/components/{{pascalCase name}}/{{pascalCase name}}.module.scss',
-        templateFile:
-          'plop-templates/Component/Component.module.scss.hbs',
+        path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.module.scss',
+        templateFile: 'plop-templates/Component/Component.module.scss.hbs',
       },
       {
         type: types.actions.add,
@@ -69,7 +67,7 @@ module.exports = plop => {
         template: `\t{{pascalCase name}},`,
       },
     ],
-  })
+  });
 
   plop.setGenerator('page', {
     description: 'Create a page',
@@ -84,21 +82,17 @@ module.exports = plop => {
       {
         type: types.actions.add,
         path: 'src/pages/{{pascalCase name}}/{{pascalCase name}}.js',
-        templateFile:
-          'plop-templates/Page/Page.js.hbs',
+        templateFile: 'plop-templates/Page/Page.js.hbs',
       },
       {
         type: types.actions.add,
         path: 'src/pages/{{pascalCase name}}/{{pascalCase name}}.test.js',
-        templateFile:
-          'plop-templates/Page/Page.test.js.hbs',
+        templateFile: 'plop-templates/Page/Page.test.js.hbs',
       },
       {
         type: types.actions.add,
-        path:
-          'src/pages/{{pascalCase name}}/{{pascalCase name}}.module.scss',
-        templateFile:
-          'plop-templates/Page/Page.module.scss.hbs',
+        path: 'src/pages/{{pascalCase name}}/{{pascalCase name}}.module.scss',
+        templateFile: 'plop-templates/Page/Page.module.scss.hbs',
       },
       {
         type: types.actions.add,
@@ -124,7 +118,7 @@ module.exports = plop => {
         template: `\t{{pascalCase name}},`,
       },
     ],
-  })
+  });
 
   plop.setGenerator('service', {
     description: 'Create service',
@@ -168,9 +162,9 @@ module.exports = plop => {
         path: 'src/services/index.js',
         pattern: regex.export,
         template: `\t{{camelCase name}},`,
-      }
+      },
     ],
-  })
+  });
 
   plop.setGenerator('hook', {
     description: 'Create a custom react hook',
@@ -184,12 +178,12 @@ module.exports = plop => {
     actions: [
       {
         type: types.actions.add,
-        path: 'src/hooks/{{camelCase name}}/{{camelCase name}}.js',
+        path: 'src/hooks/{{camelCase name}}/{{camelCase name}}.hook.js',
         templateFile: 'plop-templates/Hooks/hook.js.hbs',
       },
       {
         type: types.actions.add,
-        path: 'src/hooks/{{camelCase name}}/{{camelCase name}}.test.js',
+        path: 'src/hooks/{{camelCase name}}/{{camelCase name}}.hook.test.js',
         templateFile: 'plop-templates/Hooks/hook.test.js.hbs',
       },
       {
@@ -207,14 +201,14 @@ module.exports = plop => {
         type: types.actions.append,
         path: 'src/hooks/index.js',
         pattern: regex.import,
-        template: `import {{camelCase name}} from './{{camelCase name}}';`,
+        template: `import use{{pascalCase name}} from './{{camelCase name}}';`,
       },
       {
         type: types.actions.append,
         path: 'src/hooks/index.js',
         pattern: regex.export,
-        template: `\t{{camelCase name}},`,
-      }
+        template: `\t use{{pascalCase name}},`,
+      },
     ],
-  })
-}
+  });
+};

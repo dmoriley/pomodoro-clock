@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pomodoro renders without error 1`] = `
+<div
+  class="root"
+>
+  <section
+    class="box"
+  >
+    <header>
+      <h1>
+        Pomodoro Clock
+      </h1>
+    </header>
+    <div
+      class="root"
+    >
+      <div
+        class="settings"
+      >
+        <div
+          class="root"
+        >
+          <h3>
+            break length
+          </h3>
+          <div>
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-arrow-down fa-w-14 icon"
+              data-icon="arrow-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z"
+                fill="currentColor"
+              />
+            </svg>
+             
+            <span
+              class="setting"
+            >
+              5
+            </span>
+             
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-arrow-up fa-w-14 icon"
+              data-icon="arrow-up"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="root"
+        >
+          <h3>
+            session length
+          </h3>
+          <div>
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-arrow-down fa-w-14 icon"
+              data-icon="arrow-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z"
+                fill="currentColor"
+              />
+            </svg>
+             
+            <span
+              class="setting"
+            >
+              20
+            </span>
+             
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-arrow-up fa-w-14 icon"
+              data-icon="arrow-up"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div
+        class="root off"
+      >
+        <h2>
+          Session
+        </h2>
+        <p
+          class="time"
+        >
+          20:00
+        </p>
+      </div>
+      <div>
+        <span>
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-play fa-w-14 icon"
+            data-icon="play"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+              fill="currentColor"
+            />
+          </svg>
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-pause fa-w-14 icon"
+            data-icon="pause"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+            
+        <svg
+          aria-hidden="true"
+          class="svg-inline--fa fa-redo fa-w-16 icon"
+          data-icon="redo"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M500.33 0h-47.41a12 12 0 0 0-12 12.57l4 82.76A247.42 247.42 0 0 0 256 8C119.34 8 7.9 119.53 8 256.19 8.1 393.07 119.1 504 256 504a247.1 247.1 0 0 0 166.18-63.91 12 12 0 0 0 .48-17.43l-34-34a12 12 0 0 0-16.38-.55A176 176 0 1 1 402.1 157.8l-101.53-4.87a12 12 0 0 0-12.57 12v47.41a12 12 0 0 0 12 12h200.33a12 12 0 0 0 12-12V12a12 12 0 0 0-12-12z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
+    </div>
+    <footer>
+      <p>
+        Designed and Coded by
+        <br />
+        <span>
+          David O'Riley
+        </span>
+      </p>
+    </footer>
+  </section>
+</div>
+`;

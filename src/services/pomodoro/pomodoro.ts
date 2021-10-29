@@ -1,8 +1,8 @@
 import { BehaviorSubject } from 'rxjs';
 
-const defaultBreakLength = 5; // minutes
-const defaultSessionLength = 20; //minutes
-const defaultTime = defaultSessionLength * 60;
+export const defaultBreakLength = 5; // minutes
+export const defaultSessionLength = 20; //minutes
+export const defaultTime = defaultSessionLength * 60;
 
 export const SessionType = {
   session: 1,
@@ -66,7 +66,7 @@ const createPomodoro = () => {
 
   const breakDecrement = () => {
     if (!isOn.value && breakLength.value > 1) {
-      breakLength.next(breakLength.value !== 0 ? breakLength.value - 1 : 0);
+      breakLength.next(breakLength.value - 1);
     }
   };
 
@@ -86,10 +86,25 @@ const createPomodoro = () => {
 
   return {
     isOn$: isOn.asObservable(),
+    getIsOn() {
+      return isOn.value;
+    },
     type$: type.asObservable(),
+    getType() {
+      return type.value;
+    },
     sessionLength$: sessionLength.asObservable(),
+    getSessionLength() {
+      return sessionLength.value;
+    },
     breakLength$: breakLength.asObservable(),
+    getBreakLength() {
+      return breakLength.value;
+    },
     time$: time.asObservable(),
+    getTime() {
+      return time.value;
+    },
     reset,
     playPause,
     breakIncrement,

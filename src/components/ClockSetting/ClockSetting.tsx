@@ -21,12 +21,14 @@ const ClockSetting: React.FC<IProps> = ({
       <h3>{title}</h3>
       <div>
         <FontAwesomeIcon
+          role="button"
           className="icon"
           icon={faArrowDown}
           onClick={handleDecrement}
         />
         &nbsp;<span className={styles.setting}>{setting}</span>&nbsp;
         <FontAwesomeIcon
+          role="button"
           icon={faArrowUp}
           className="icon"
           onClick={handleIncrement}

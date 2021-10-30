@@ -10,12 +10,17 @@ type IProps = {
 const ClockActions: React.FC<IProps> = ({ handlePlayPause, handleReset }) => {
   return (
     <div>
-      <span onClick={handlePlayPause}>
+      <span role="button" onClick={handlePlayPause}>
         <FontAwesomeIcon icon={faPlay} className="icon" />
         <FontAwesomeIcon icon={faPause} className="icon" />
       </span>
       &nbsp;&nbsp;&nbsp;&nbsp;
-      <FontAwesomeIcon icon={faRedo} className="icon" onClick={handleReset} />
+      <FontAwesomeIcon
+        role="button"
+        icon={faRedo}
+        className="icon"
+        onClick={handleReset}
+      />
     </div>
   );
 };

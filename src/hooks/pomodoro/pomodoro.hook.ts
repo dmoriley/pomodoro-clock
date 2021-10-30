@@ -1,10 +1,6 @@
 import { useState, useEffect } from 'react';
 import { pomodoro } from '../../services';
 
-// type test = {
-
-// }
-
 const usePomodoro = (): any[] => {
   const [power, setPower] = useState(false);
   const [time, setTime] = useState(0);

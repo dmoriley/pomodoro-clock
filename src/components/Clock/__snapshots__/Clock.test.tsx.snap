@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Clock should match snapshot when off 1`] = `
+<div
+  class="root off"
+>
+  <h2>
+    Session
+  </h2>
+  <p
+    class="time"
+  >
+    02:00
+  </p>
+</div>
+`;
+
+exports[`Clock should match snapshot when on 1`] = `
+<div
+  class="root session"
+>
+  <h2>
+    Session
+  </h2>
+  <p
+    class="time"
+  >
+    02:00
+  </p>
+</div>
+`;
+
+exports[`Clock should match snapshot when status is break 1`] = `
+<div
+  class="root break"
+>
+  <h2>
+    Break
+  </h2>
+  <p
+    class="time"
+  >
+    02:00
+  </p>
+</div>
+`;

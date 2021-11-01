@@ -1,19 +1,20 @@
 import { BehaviorSubject } from 'rxjs';
 
-export const defaultBreakLength = 5; // minutes
-export const defaultSessionLength = 20; //minutes
-export const defaultTime = defaultSessionLength * 60;
-
 export const SessionType = {
   session: 1,
   break: 2,
 };
 
+export const defaultBreakLength = 5; // minutes
+export const defaultSessionLength = 20; //minutes
+export const defaultTime = defaultSessionLength * 60;
+export const defaultType = SessionType.session;
+
 const createPomodoro = () => {
   let interval;
 
   const isOn = new BehaviorSubject(false);
-  const type = new BehaviorSubject(SessionType.session);
+  const type = new BehaviorSubject(defaultType);
   const sessionLength = new BehaviorSubject(defaultSessionLength);
   const breakLength = new BehaviorSubject(defaultBreakLength);
   const time = new BehaviorSubject(defaultTime); // time displayed on the clock
@@ -30,7 +31,7 @@ const createPomodoro = () => {
 
   const reset = () => {
     pause();
-    type.next(SessionType.session);
+    type.next(defaultType);
     sessionLength.next(defaultSessionLength);
     breakLength.next(defaultBreakLength);
     time.next(defaultTime);

@@ -1,7 +1,6 @@
 import React from 'react';
 import ClockActions from './ClockActions';
-import { fireEvent, render, screen } from '@testing-library/react';
-// import '@testing-library/jest-dom/extend-expect'
+import { fireEvent, render } from '@testing-library/react';
 
 describe('ClockActions', () => {
   it('renders without error', () => {

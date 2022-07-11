@@ -2,7 +2,6 @@
   min-height: 100vh;
   min-width: 100vw;
   background-color: var(--dark-grey-blue);
-  // background: linear-gradient(rgb(102, 215, 250), $main-colour);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,11 +9,11 @@
 }
 
 .box {
-  color: fade-out( white, .15);
+  color: fade-out(white, 0.15);
   padding: var(--s-size) var(--s-size);
-  text-align:center;
+  text-align: center;
   width: 50rem;
-  margin-bottom: 2.0rem;
+  margin-bottom: 2rem;
 }
 
 h1 {
@@ -22,7 +21,7 @@ h1 {
 }
 
 footer {
-  p{
+  p {
     color: var(--rose-red);
     font-family: monospace;
     font-size: var(--s-size);
@@ -33,10 +32,3 @@ footer {
     }
   }
 }
-
-// @media only screen and (min-width: $desktop-breakpoint) {
-// // desktop css in here
-//   .box-layout__box {
-//     // width: auto;
-//   }
-// }

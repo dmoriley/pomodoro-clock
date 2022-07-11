@@ -16,16 +16,16 @@ exports[`ClockContainer renders without error and match snapshot 1`] = `
       <div>
         <svg
           aria-hidden="true"
-          class="svg-inline--fa fa-arrow-down fa-w-14 icon"
+          class="svg-inline--fa fa-arrow-down icon"
           data-icon="arrow-down"
           data-prefix="fas"
           focusable="false"
           role="button"
-          viewBox="0 0 448 512"
+          viewBox="0 0 384 512"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z"
+            d="M374.6 310.6l-160 160C208.4 476.9 200.2 480 192 480s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 370.8V64c0-17.69 14.33-31.1 31.1-31.1S224 46.31 224 64v306.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0S387.1 298.1 374.6 310.6z"
             fill="currentColor"
           />
         </svg>
@@ -38,16 +38,16 @@ exports[`ClockContainer renders without error and match snapshot 1`] = `
          
         <svg
           aria-hidden="true"
-          class="svg-inline--fa fa-arrow-up fa-w-14 icon"
+          class="svg-inline--fa fa-arrow-up icon"
           data-icon="arrow-up"
           data-prefix="fas"
           focusable="false"
           role="button"
-          viewBox="0 0 448 512"
+          viewBox="0 0 384 512"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+            d="M374.6 246.6C368.4 252.9 360.2 256 352 256s-16.38-3.125-22.62-9.375L224 141.3V448c0 17.69-14.33 31.1-31.1 31.1S160 465.7 160 448V141.3L54.63 246.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160C387.1 213.9 387.1 234.1 374.6 246.6z"
             fill="currentColor"
           />
         </svg>
@@ -62,16 +62,16 @@ exports[`ClockContainer renders without error and match snapshot 1`] = `
       <div>
         <svg
           aria-hidden="true"
-          class="svg-inline--fa fa-arrow-down fa-w-14 icon"
+          class="svg-inline--fa fa-arrow-down icon"
           data-icon="arrow-down"
           data-prefix="fas"
           focusable="false"
           role="button"
-          viewBox="0 0 448 512"
+          viewBox="0 0 384 512"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z"
+            d="M374.6 310.6l-160 160C208.4 476.9 200.2 480 192 480s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 370.8V64c0-17.69 14.33-31.1 31.1-31.1S224 46.31 224 64v306.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0S387.1 298.1 374.6 310.6z"
             fill="currentColor"
           />
         </svg>
@@ -84,16 +84,16 @@ exports[`ClockContainer renders without error and match snapshot 1`] = `
          
         <svg
           aria-hidden="true"
-          class="svg-inline--fa fa-arrow-up fa-w-14 icon"
+          class="svg-inline--fa fa-arrow-up icon"
           data-icon="arrow-up"
           data-prefix="fas"
           focusable="false"
           role="button"
-          viewBox="0 0 448 512"
+          viewBox="0 0 384 512"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+            d="M374.6 246.6C368.4 252.9 360.2 256 352 256s-16.38-3.125-22.62-9.375L224 141.3V448c0 17.69-14.33 31.1-31.1 31.1S160 465.7 160 448V141.3L54.63 246.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160C387.1 213.9 387.1 234.1 374.6 246.6z"
             fill="currentColor"
           />
         </svg>
@@ -118,31 +118,31 @@ exports[`ClockContainer renders without error and match snapshot 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="svg-inline--fa fa-play fa-w-14 icon"
+        class="svg-inline--fa fa-play icon"
         data-icon="play"
         data-prefix="fas"
         focusable="false"
         role="img"
-        viewBox="0 0 448 512"
+        viewBox="0 0 384 512"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+          d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z"
           fill="currentColor"
         />
       </svg>
       <svg
         aria-hidden="true"
-        class="svg-inline--fa fa-pause fa-w-14 icon"
+        class="svg-inline--fa fa-pause icon"
         data-icon="pause"
         data-prefix="fas"
         focusable="false"
         role="img"
-        viewBox="0 0 448 512"
+        viewBox="0 0 320 512"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"
+          d="M272 63.1l-32 0c-26.51 0-48 21.49-48 47.1v288c0 26.51 21.49 48 48 48L272 448c26.51 0 48-21.49 48-48v-288C320 85.49 298.5 63.1 272 63.1zM80 63.1l-32 0c-26.51 0-48 21.49-48 48v288C0 426.5 21.49 448 48 448l32 0c26.51 0 48-21.49 48-48v-288C128 85.49 106.5 63.1 80 63.1z"
           fill="currentColor"
         />
       </svg>
@@ -150,8 +150,8 @@ exports[`ClockContainer renders without error and match snapshot 1`] = `
         
     <svg
       aria-hidden="true"
-      class="svg-inline--fa fa-redo fa-w-16 icon"
-      data-icon="redo"
+      class="svg-inline--fa fa-arrow-rotate-right icon"
+      data-icon="arrow-rotate-right"
       data-prefix="fas"
       focusable="false"
       role="button"
@@ -159,7 +159,7 @@ exports[`ClockContainer renders without error and match snapshot 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M500.33 0h-47.41a12 12 0 0 0-12 12.57l4 82.76A247.42 247.42 0 0 0 256 8C119.34 8 7.9 119.53 8 256.19 8.1 393.07 119.1 504 256 504a247.1 247.1 0 0 0 166.18-63.91 12 12 0 0 0 .48-17.43l-34-34a12 12 0 0 0-16.38-.55A176 176 0 1 1 402.1 157.8l-101.53-4.87a12 12 0 0 0-12.57 12v47.41a12 12 0 0 0 12 12h200.33a12 12 0 0 0 12-12V12a12 12 0 0 0-12-12z"
+        d="M496 48V192c0 17.69-14.31 32-32 32H320c-17.69 0-32-14.31-32-32s14.31-32 32-32h63.39c-29.97-39.7-77.25-63.78-127.6-63.78C167.7 96.22 96 167.9 96 256s71.69 159.8 159.8 159.8c34.88 0 68.03-11.03 95.88-31.94c14.22-10.53 34.22-7.75 44.81 6.375c10.59 14.16 7.75 34.22-6.375 44.81c-39.03 29.28-85.36 44.86-134.2 44.86C132.5 479.9 32 379.4 32 256s100.5-223.9 223.9-223.9c69.15 0 134 32.47 176.1 86.12V48c0-17.69 14.31-32 32-32S496 30.31 496 48z"
         fill="currentColor"
       />
     </svg>

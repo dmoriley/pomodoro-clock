@@ -156,7 +156,12 @@ describe('pomodoro', () => {
   });
 
   describe('playPause', () => {
-    afterEach(() => {
+    beforeEach(() => {
+      jest.useFakeTimers({
+        legacyFakeTimers: true,
+      });
+    });
+    afterAll(() => {
       jest.useRealTimers();
     });
 
@@ -169,7 +174,6 @@ describe('pomodoro', () => {
     });
 
     it('should call setInterval and clearInterval', () => {
-      jest.useFakeTimers();
       const setSpy = jest.spyOn(global, 'setInterval');
       const clearSpy = jest.spyOn(global, 'clearInterval');
 
@@ -179,21 +183,21 @@ describe('pomodoro', () => {
       pomodoro.playPause();
       expect(clearSpy).toHaveBeenCalled();
       expect(clearSpy).toHaveBeenCalledWith(expect.any(Number));
+      jest.useRealTimers();
     });
 
     it('should decrease the time on completion of one interval loop', () => {
-      jest.useFakeTimers();
       expect(pomodoro.getTime()).toBe(20 * 60);
 
       pomodoro.playPause();
       jest.advanceTimersByTime(5000); // should have fired the call back of the setInterval 5 times
 
       expect(pomodoro.getTime()).toBe(20 * 60 - 5);
+      jest.useRealTimers();
     });
 
     it('should play sound and change to break session on completion of session, then back to session', () => {
       HTMLMediaElement.prototype.play = jest.fn();
-      jest.useFakeTimers();
       pomodoro.reset();
       expect(pomodoro.getTime()).toBe(20 * 60);
       expect(pomodoro.getType()).toBe(SessionType.session);
@@ -212,6 +216,7 @@ describe('pomodoro', () => {
       expect(HTMLMediaElement.prototype.play).toHaveBeenCalled();
       expect(pomodoro.getTime()).toBe(pomodoro.getSessionLength() * 60);
       expect(pomodoro.getType()).toBe(SessionType.session);
+      jest.useRealTimers();
     });
   });
 });

@@ -1,22 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
-    "esModuleInterop": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["src", "vite.config.ts"]
 }

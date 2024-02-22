@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { pomodoro } from '../../services';
+import { useState, useEffect } from "react";
+import { pomodoro } from "../../services";
 
 const usePomodoro = (): any[] => {
   const [power, setPower] = useState(false);
@@ -30,6 +30,7 @@ const usePomodoro = (): any[] => {
     pomodoro.sessionIncrement,
     pomodoro.breakDecrement,
     pomodoro.breakIncrement,
+    pomodoro.finishEarly,
   ];
 };
 

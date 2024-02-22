@@ -1,4 +1,4 @@
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject } from "rxjs";
 
 export const SessionType = {
   session: 1,
@@ -11,15 +11,15 @@ export const defaultTime = defaultSessionLength * 60;
 export const defaultType = SessionType.session;
 
 const createPomodoro = () => {
-  let interval;
+  let interval: NodeJS.Timer;
 
   const isOn = new BehaviorSubject(false);
   const type = new BehaviorSubject(defaultType);
   const sessionLength = new BehaviorSubject(defaultSessionLength);
   const breakLength = new BehaviorSubject(defaultBreakLength);
-  const time = new BehaviorSubject(defaultTime); // time displayed on the clock
+  const time = new BehaviorSubject(defaultTime); // time displayed on the clock, saved in seconds
 
-  const start = (callback, delay = 1000) => {
+  const start = (callback: () => any, delay = 1000) => {
     isOn.next(true);
     interval = setInterval(callback, delay);
   };
@@ -44,11 +44,11 @@ const createPomodoro = () => {
         if (time.value !== 0) {
           time.next(time.value - 1);
         } else if (type.value === SessionType.session) {
-          new Audio('./sounds/success.mp3').play();
+          new Audio("./sounds/success.mp3").play();
           type.next(SessionType.break);
           time.next(breakLength.value * 60);
         } else {
-          new Audio('./sounds/doubleBeep.mp3').play();
+          new Audio("./sounds/doubleBeep.mp3").play();
           type.next(SessionType.session);
           time.next(sessionLength.value * 60);
         }
@@ -85,6 +85,15 @@ const createPomodoro = () => {
     }
   };
 
+  const finishEarly = () => {
+    if (time.value <= 5) {
+      return;
+    }
+
+    // finish early by setting the time to 5 seconds
+    time.next(5);
+  };
+
   return {
     isOn$: isOn.asObservable(),
     getIsOn() {
@@ -112,6 +121,7 @@ const createPomodoro = () => {
     breakDecrement,
     sessionIncrement,
     sessionDecrement,
+    finishEarly,
   };
 };
 

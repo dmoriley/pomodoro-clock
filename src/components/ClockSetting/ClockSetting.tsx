@@ -1,7 +1,5 @@
-import React from 'react';
-import styles from './ClockSetting.module.scss';
-import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from "react";
+import styles from "./ClockSetting.module.scss";
 
 type IProps = {
   title: string;
@@ -20,19 +18,39 @@ const ClockSetting: React.FC<IProps> = ({
     <div className={styles.root}>
       <h3>{title}</h3>
       <div>
-        <FontAwesomeIcon
-          role="button"
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={2.5}
+          stroke="currentColor"
           className="icon"
-          icon={faArrowDown}
+          role="button"
           onClick={handleDecrement}
-        />
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
+          />
+        </svg>
         &nbsp;<span className={styles.setting}>{setting}</span>&nbsp;
-        <FontAwesomeIcon
-          role="button"
-          icon={faArrowUp}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={2.5}
+          stroke="currentColor"
           className="icon"
+          role="button"
           onClick={handleIncrement}
-        />
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"
+          />
+        </svg>
       </div>
     </div>
   );

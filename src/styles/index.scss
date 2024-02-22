@@ -2,8 +2,14 @@
 @import './base/base';
 
 .icon {
-  font-size: var(--l-size) !important;
   cursor: pointer;
   user-select: none;
+  display: inline-block;
+  height: 32px;
+  vertical-align: -4px;
+
+  &-l {
+    height: 48px;
+  }
 }
 

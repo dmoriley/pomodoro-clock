@@ -8,8 +8,13 @@
   height: 32px;
   vertical-align: -4px;
 
+  &:active {
+    color: #1E67A9;
+  }
+
   &-l {
     height: 48px;
   }
 }
+
 
